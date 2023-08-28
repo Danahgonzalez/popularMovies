@@ -1,0 +1,15 @@
+{
+  "name": "popular-movie",
+  "version": "1.0.0",
+  "description": "proyecto usando la API de TMDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "API",
+    "fetch"
+  ],
+  "author": "SDanahgs",
+  "license": "ISC"
+}

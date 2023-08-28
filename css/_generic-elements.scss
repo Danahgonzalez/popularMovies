@@ -1,0 +1,194 @@
+@use 'general-styles';
+// ATOMS
+
+//Iconos
+.icon{
+    font-size: 1.2rem;
+}
+
+//logo
+.logo{
+    width: 80px;
+    height: 50px;
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+//Buttoms
+@mixin btns ($padding1, $padding2){
+    cursor: pointer;
+    color: white;
+    padding: $padding1 $padding2;
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: transparent;
+    transition: 500ms;
+
+    &:hover{
+        color: black;
+        background-color: white;
+    }
+}
+
+.btnGenre{
+    @include btns(.5rem, 0rem)
+}
+
+.btnPagination{
+    text-transform: uppercase;
+    margin-left: 1rem;
+    @include btns(.5rem, 2.5rem)
+}
+
+
+//Movie poster
+.moviePoster{
+    width: 100%;
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: .5rem;
+    }
+}
+
+// MOLECULES
+
+//Movie Title
+.movieInfo{
+
+    .movieInfo__title{
+        margin: 0px;
+        text-transform: capitalize;
+        margin-bottom: -5px;
+        font-weight: general-styles.$SemiBold;
+    }
+
+    .movieInfo__date{
+        font-weight: general-styles.$SemiBold;
+        opacity: 50%;
+    }   
+
+}
+
+// Header
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid white;
+}
+
+// Footer
+.footer{
+    text-align: center;
+    padding: 1rem 0rem;
+    border-top: 2px solid white;
+
+    hr{
+        border: 1px solid white;
+    }
+
+    .footer-content{
+        width: 90%;
+        margin: 0 auto;
+
+        .footer-content__nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .mention{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .redes{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+    }
+}
+
+
+// Genre Slider
+
+.genreSlider{
+    width: 80%;
+    max-width: 1500px;
+    margin: 0px auto;
+    margin-bottom: 2rem;
+    position: relative;
+
+    .icon{
+        cursor: pointer;
+        top: 50%;
+        position: absolute;
+        transform: translateY(-50%);
+        
+    
+        &:first-child{
+            left: -20px;
+        }
+
+        &:last-child{
+            right: -20px;
+        }
+    }
+
+
+    .genres{
+        font-size: 0px;
+        overflow: hidden;
+        white-space: nowrap;
+        scroll-behavior: smooth;
+
+        .btnGenre{
+            width: calc(100% / 8);
+            margin-left: 20px;
+
+            &:first-child{
+                margin-left: 0px;
+            }
+        }
+    }
+
+}
+
+// pagination
+.pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+// ORGANISM
+
+// Movies Content
+.content{
+    margin-bottom: 2rem;
+
+    .movies{
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(
+                280px,
+                280px
+            )
+        );
+        gap: 1rem;
+        width: 80%;
+        margin: auto;
+    }
+}

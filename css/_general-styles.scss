@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&family=Source+Sans+3:wght@300;600;700&display=swap');
+
+// VARIABLES
+$SourceSans3: 'Source Sans 3', sans-serif;
+$Bold: 700;
+$SemiBold: 600;
+$Light: 300;
+
+*{
+    box-sizing: border-box;
+}
+
+* a{
+    color: white;
+    text-decoration: none;
+}
+
+body{
+    color: white;
+    background-color: #060709;
+    font-family: $SourceSans3;
+    padding: 0;
+    margin: 0;
+}
+
+.global{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main{
+    flex-grow: 1;
+    padding: 2rem 0rem;
+}
+
+h1{
+    text-align: center;
+}

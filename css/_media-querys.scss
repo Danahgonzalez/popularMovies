@@ -1,0 +1,45 @@
+@media screen and (max-width: 1200px) {
+    .genreSlider{
+    
+        .genres{
+    
+            .btnGenre{
+                width: calc(100% / 4);
+            }
+        }
+    
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .header{
+        flex-direction: column;
+    }
+
+    .genreSlider{
+    
+        .genres{
+    
+            .btnGenre{
+                width: calc(100% / 2);
+            }
+        }
+    
+    }
+
+    .content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .movies{
+            display: grid;
+            justify-content: center;
+            grid-template-columns: repeat(
+                auto-fit,
+                100%
+            );
+            gap: 1rem;
+            width: 80%;
+        }
+    }
+}
